@@ -1,7 +1,7 @@
 #ifndef TauAnalysis_ClassicSVfit_MeasuredTauLepton_h
 #define TauAnalysis_ClassicSVfit_MeasuredTauLepton_h
 
-#include "TauAnalysis/ClassicSVfit/interface/svFitAuxFunctions.h" // Vector, LorentzVector
+#include "svFitAuxFunctions.h"// Vector, LorentzVector
 
 namespace classic_svFit
 {

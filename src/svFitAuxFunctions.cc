@@ -1,4 +1,4 @@
-#include "TauAnalysis/ClassicSVfit/interface/svFitAuxFunctions.h"
+#include "../interface/svFitAuxFunctions.h"
 
 #include <TMath.h>
 #include <TF1.h>
@@ -68,7 +68,7 @@ void extractResult(TGraphErrors* graph, double& mass, double& massErr, double& L
     graph->GetPoint(iPoint, x, y);
     double xErr = graph->GetErrorX(iPoint);
     double yErr = graph->GetErrorY(iPoint);
-    //std::cout << "point #" << iPoint << ": x = " << x << " +/- " << xErr << ", y = " << y << " +/- " << yErr << std::endl;
+    //std::cout << "point #" << iPoint << ": x = " << x << "..- " << xErr << ", y = " << y << "..- " << yErr << std::endl;
     if ( y > (1.e-1*y_Lmax) && TMath::Abs(iPoint - idxPoint_Lmax) <= 5 ) {
       GraphPoint graphPoint;
       graphPoint.x_ = x;
@@ -96,9 +96,9 @@ void extractResult(TGraphErrors* graph, double& mass, double& massErr, double& L
     if ( fitResult.Get() ) {
       if ( verbosity >= 1 ) {
         std::cout << "fitting graph of p versus M(test) in range " << xMin_fit << ".." << xMax_fit << ", result:" << std::endl;
-        std::cout << " parameter #0 = " << fitFunction->GetParameter(0) << " +/- " << fitFunction->GetParError(0) << std::endl;
-        std::cout << " parameter #1 = " << fitFunction->GetParameter(1) << " +/- " << fitFunction->GetParError(1) << std::endl;
-        std::cout << " parameter #2 = " << fitFunction->GetParameter(2) << " +/- " << fitFunction->GetParError(2) << std::endl;
+        std::cout << " parameter #0 = " << fitFunction->GetParameter(0) << "..- " << fitFunction->GetParError(0) << std::endl;
+        std::cout << " parameter #1 = " << fitFunction->GetParameter(1) << "..- " << fitFunction->GetParError(1) << std::endl;
+        std::cout << " parameter #2 = " << fitFunction->GetParameter(2) << "..- " << fitFunction->GetParError(2) << std::endl;
         std::cout << "chi^2 = " << fitResult->Chi2() << std::endl;
       }
       if ( fitResult->Chi2() < (10.*numPoints) &&
@@ -107,7 +107,7 @@ void extractResult(TGraphErrors* graph, double& mass, double& massErr, double& L
         mass = fitFunction->GetParameter(0);
         massErr = TMath::Sqrt(square(fitFunction->GetParameter(1)) + square(fitFunction->GetParError(0)));
         Lmax = TMath::Exp(-fitFunction->GetParameter(2));
-        //std::cout << "fit: mass = " << mass << " +/- " << massErr << " (Lmax = " << Lmax << ")" << std::endl;
+        //std::cout << "fit: mass = " << mass << "..- " << massErr << " (Lmax = " << Lmax << ")" << std::endl;
         useFit = true;
       }
     } else {
@@ -119,7 +119,7 @@ void extractResult(TGraphErrors* graph, double& mass, double& massErr, double& L
     mass = x_Lmax;
     massErr = TMath::Sqrt(0.5*(square(x_Lmax - xMin_fit) + square(xMax_fit - x_Lmax)))/TMath::Sqrt(2.*TMath::Log(10.));
     Lmax = y_Lmax;
-    //std::cout << "graph: mass = " << mass << " +/- " << massErr << " (Lmax = " << Lmax << ")" << std::endl;
+    //std::cout << "graph: mass = " << mass << "..- " << massErr << " (Lmax = " << Lmax << ")" << std::endl;
   }
 
   delete likelihoodGraph_forFit;

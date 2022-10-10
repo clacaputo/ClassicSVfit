@@ -1,6 +1,6 @@
-#include "TauAnalysis/ClassicSVfit/interface/SVfitIntegratorMarkovChain.h"
+#include "../interface/SVfitIntegratorMarkovChain.h"
 
-#include "TauAnalysis/ClassicSVfit/interface/svFitAuxFunctions.h"
+#include "../interface/svFitAuxFunctions.h"
 
 #include <TMath.h>
 
@@ -330,7 +330,7 @@ void SVfitIntegratorMarkovChain::integrate(gPtr_C g, const double* xl, const dou
   if ( k >= 2 ) integralErr /= (k*(k - 1));
   integralErr = TMath::Sqrt(integralErr);
 
-  if ( verbosity_ >= 1 ) std::cout << "--> returning integral = " << integral << " +/- " << integralErr << std::endl;
+  if ( verbosity_ >= 1 ) std::cout << "--> returning integral = " << integral << "..- " << integralErr << std::endl;
 
   errorFlag_ = ( numChainsRun_ >= 0.5*numChains_ ) ? 0 : 1;
 
@@ -370,7 +370,7 @@ void SVfitIntegratorMarkovChain::print(std::ostream& stream) const
     if ( numBatches_ >= 2 ) integralErr /= (numBatches_*(numBatches_ - 1));
     integralErr = TMath::Sqrt(integralErr);
 
-    std::cout << " chain #" << iChain << ": integral = " << integral << " +/- " << integralErr << std::endl;
+    std::cout << " chain #" << iChain << ": integral = " << integral << "..- " << integralErr << std::endl;
   }
   std::cout << "moves: accepted = " << numMoves_accepted_ << ", rejected = " << numMoves_rejected_
             << " (fraction = " << (double)numMoves_accepted_/(numMoves_accepted_ + numMoves_rejected_)*100.

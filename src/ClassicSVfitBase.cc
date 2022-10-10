@@ -1,6 +1,6 @@
-#include "TauAnalysis/ClassicSVfit/interface/ClassicSVfitBase.h"
+#include "../interface/ClassicSVfitBase.h"
 
-#include "TauAnalysis/ClassicSVfit/interface/SVfitIntegratorMarkovChain.h"
+#include "../interface/SVfitIntegratorMarkovChain.h"
 
 #include <TGraphErrors.h>
 #include <TH1.h>

@@ -1,9 +1,9 @@
 #ifndef TauAnalysis_ClassicSVfit_ClassicSVfit_h
 #define TauAnalysis_ClassicSVfit_ClassicSVfit_h
 
-#include "TauAnalysis/ClassicSVfit/interface/ClassicSVfitBase.h"
-#include "TauAnalysis/ClassicSVfit/interface/MeasuredTauLepton.h"
-#include "TauAnalysis/ClassicSVfit/interface/svFitHistogramAdapter.h"
+#include "ClassicSVfitBase.h"
+#include "MeasuredTauLepton.h"
+#include "svFitHistogramAdapter.h"
 
 class ClassicSVfit : public ClassicSVfitBase
 {

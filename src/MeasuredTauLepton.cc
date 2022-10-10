@@ -1,4 +1,4 @@
-#include "TauAnalysis/ClassicSVfit/interface/MeasuredTauLepton.h"
+#include "../interface/MeasuredTauLepton.h"
 
 #include <TMath.h>
 

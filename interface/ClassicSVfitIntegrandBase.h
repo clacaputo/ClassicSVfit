@@ -1,13 +1,13 @@
 #ifndef TauAnalysis_ClassicSVfit_ClassicSVfitIntegrandBase_h
 #define TauAnalysis_ClassicSVfit_ClassicSVfitIntegrandBase_h
 
-#include "TauAnalysis/ClassicSVfit/interface/MeasuredTauLepton.h"
-#include "TauAnalysis/ClassicSVfit/interface/FittedTauLepton.h"
+#include "MeasuredTauLepton.h"
+#include "FittedTauLepton.h"
 #ifdef USE_SVFITTF
 #include "TauAnalysis/SVfitTF/interface/HadTauTFBase.h"
 #endif
-#include "TauAnalysis/ClassicSVfit/interface/svFitHistogramAdapter.h"
-#include "TauAnalysis/ClassicSVfit/interface/svFitAuxFunctions.h"
+#include "svFitHistogramAdapter.h"
+#include "svFitAuxFunctions.h"
 
 #include <Math/Functor.h>
 #include <TMatrixD.h>

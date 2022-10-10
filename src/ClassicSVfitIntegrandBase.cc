@@ -1,4 +1,4 @@
-#include "TauAnalysis/ClassicSVfit/interface/ClassicSVfitIntegrandBase.h"
+#include "../interface/ClassicSVfitIntegrandBase.h"
 
 #include <TMath.h>
 #include <TString.h> // Form
@@ -67,7 +67,7 @@ void ClassicSVfitIntegrandBase::addLogM_dynamic(bool value, const std::string& p
       TString power_tstring = power.data();
       power_tstring = power_tstring.ReplaceAll("m", "x");
       power_tstring = power_tstring.ReplaceAll("mass", "x");
-      std::string formulaName = "ClassicSVfitIntegrand_addLogM_dynamic_formula";
+      std::string formulaName = "..Integrand_addLogM_dynamic_formula";
       delete addLogM_dynamic_formula_;
       addLogM_dynamic_formula_ = new TFormula(formulaName.data(), power_tstring.Data());
     } else {

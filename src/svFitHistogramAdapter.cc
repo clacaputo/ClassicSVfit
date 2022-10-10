@@ -1,4 +1,4 @@
-#include "TauAnalysis/ClassicSVfit/interface/svFitHistogramAdapter.h"
+#include "../interface/svFitHistogramAdapter.h"
 
 #include <TMath.h>
 #include <TFile.h>
@@ -240,7 +240,7 @@ SVfitQuantityTauPt::SVfitQuantityTauPt(const std::string& label)
 
 TH1* SVfitQuantityTauPt::createHistogram(const LorentzVector& visP4) const
 {
-  return HistogramTools::makeHistogram_logBinWidth("ClassicSVfitIntegrand_" + label_ + "_histogramPt", 1., 1.e+3, 1.025);
+  return HistogramTools::makeHistogram_logBinWidth("..Integrand_" + label_ + "_histogramPt", 1., 1.e+3, 1.025);
 }
 
 SVfitQuantityTauEta::SVfitQuantityTauEta(const std::string& label)
@@ -249,7 +249,7 @@ SVfitQuantityTauEta::SVfitQuantityTauEta(const std::string& label)
 
 TH1* SVfitQuantityTauEta::createHistogram(const LorentzVector& visP4) const
 {
-  return HistogramTools::makeHistogram_linBinWidth("ClassicSVfitIntegrand_" + label_ + "_histogramEta", 198, -9.9, +9.9);
+  return HistogramTools::makeHistogram_linBinWidth("..Integrand_" + label_ + "_histogramEta", 198, -9.9, +9.9);
 }
 
 SVfitQuantityTauPhi::SVfitQuantityTauPhi(const std::string& label)
@@ -258,7 +258,7 @@ SVfitQuantityTauPhi::SVfitQuantityTauPhi(const std::string& label)
 
 TH1* SVfitQuantityTauPhi::createHistogram(const LorentzVector& visP4) const
 {
-  return HistogramTools::makeHistogram_linBinWidth("ClassicSVfitIntegrand_" + label_ + "_histogramEta", 180, -TMath::Pi(), +TMath::Pi());
+  return HistogramTools::makeHistogram_linBinWidth("..Integrand_" + label_ + "_histogramEta", 180, -TMath::Pi(), +TMath::Pi());
 }
 
 HistogramAdapterTau::HistogramAdapterTau(const std::string& label)
@@ -377,7 +377,7 @@ SVfitQuantityDiTauPt::SVfitQuantityDiTauPt(const std::string& label)
 
 TH1* SVfitQuantityDiTauPt::createHistogram(const LorentzVector& vis1P4, const LorentzVector& vis2P4, const Vector& met) const
 {
-  return HistogramTools::makeHistogram_logBinWidth("ClassicSVfitIntegrand_" + label_ + "_histogramPt", 1., 1.e+3, 1.025);
+  return HistogramTools::makeHistogram_logBinWidth("..Integrand_" + label_ + "_histogramPt", 1., 1.e+3, 1.025);
 }
 
 SVfitQuantityDiTauEta::SVfitQuantityDiTauEta(const std::string& label)
@@ -386,7 +386,7 @@ SVfitQuantityDiTauEta::SVfitQuantityDiTauEta(const std::string& label)
 
 TH1* SVfitQuantityDiTauEta::createHistogram(const LorentzVector& vis1P4, const LorentzVector& vis2P4, const Vector& met) const
 {
-  return HistogramTools::makeHistogram_linBinWidth("ClassicSVfitIntegrand_" + label_ + "_histogramEta", 198, -9.9, +9.9);
+  return HistogramTools::makeHistogram_linBinWidth("..Integrand_" + label_ + "_histogramEta", 198, -9.9, +9.9);
 }
 
 SVfitQuantityDiTauPhi::SVfitQuantityDiTauPhi(const std::string& label)
@@ -395,7 +395,7 @@ SVfitQuantityDiTauPhi::SVfitQuantityDiTauPhi(const std::string& label)
 
 TH1* SVfitQuantityDiTauPhi::createHistogram(const LorentzVector& vis1P4, const LorentzVector& vis2P4, const Vector& met) const
 {
-  return HistogramTools::makeHistogram_linBinWidth("ClassicSVfitIntegrand_" + label_ + "_histogramPhi", 180, -TMath::Pi(), +TMath::Pi());
+  return HistogramTools::makeHistogram_linBinWidth("..Integrand_" + label_ + "_histogramPhi", 180, -TMath::Pi(), +TMath::Pi());
 }
 
 SVfitQuantityDiTauMass::SVfitQuantityDiTauMass(const std::string& label)
@@ -407,7 +407,7 @@ TH1* SVfitQuantityDiTauMass::createHistogram(const LorentzVector& vis1P4, const 
   double visMass = (vis1P4 + vis2P4).mass();
   double minMass = visMass/1.0125;
   double maxMass = TMath::Max(1.e+4, 1.e+1*minMass);
-  return HistogramTools::makeHistogram_logBinWidth("ClassicSVfitIntegrand_" + label_ + "_histogramMass", minMass, maxMass, 1.025);
+  return HistogramTools::makeHistogram_logBinWidth("..Integrand_" + label_ + "_histogramMass", minMass, maxMass, 1.025);
 }
 
 SVfitQuantityDiTauTransverseMass::SVfitQuantityDiTauTransverseMass(const std::string& label)
@@ -421,7 +421,7 @@ TH1* SVfitQuantityDiTauTransverseMass::createHistogram(const LorentzVector& vis1
   double visTransverseMass = TMath::Sqrt(TMath::Max(1., visTransverseMass2));
   double minTransverseMass = visTransverseMass/1.0125;
   double maxTransverseMass = TMath::Max(1.e+4, 1.e+1*minTransverseMass);
-  return HistogramTools::makeHistogram_logBinWidth("ClassicSVfitIntegrand_" + label_ + "_histogramTransverseMass", minTransverseMass, maxTransverseMass, 1.025);
+  return HistogramTools::makeHistogram_logBinWidth("..Integrand_" + label_ + "_histogramTransverseMass", minTransverseMass, maxTransverseMass, 1.025);
 }
     
 HistogramAdapterDiTau::HistogramAdapterDiTau(const std::string& label)

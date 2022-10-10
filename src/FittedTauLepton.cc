@@ -1,4 +1,4 @@
-#include "TauAnalysis/ClassicSVfit/interface/FittedTauLepton.h"
+#include "../interface/FittedTauLepton.h"
 
 #include <TMath.h>
 
@@ -97,7 +97,7 @@ void FittedTauLepton::updateTauMomentum(double x, double phiNu, double nuMass)
   }
 
   double cosPhiNu, sinPhiNu;
-  sincos(phiNu_, &sinPhiNu, &cosPhiNu);
+  __sincos(phiNu_, &sinPhiNu, &cosPhiNu);
   double thetaNu = TMath::ACos(cosThetaNu);
   double sinThetaNu = TMath::Sin(thetaNu);
 
