@@ -97,7 +97,7 @@ void FittedTauLepton::updateTauMomentum(double x, double phiNu, double nuMass)
   }
 
   double cosPhiNu, sinPhiNu;
-  __sincos(phiNu_, &sinPhiNu, &cosPhiNu);
+  sincos(phiNu_, &sinPhiNu, &cosPhiNu);
   double thetaNu = TMath::ACos(cosThetaNu);
   double sinThetaNu = TMath::Sin(thetaNu);
 

@@ -4,10 +4,10 @@
    \brief Example for computing Higgs boson (H) mass in lepton-flavor-violating H decays, e.g H -> mu tau -> mu tau_h nu (cf. arXiv:1502.07400)
 */
 
-#include "TauAnalysis/ClassicSVfit/interface/ClassicSVfit.h"
-#include "TauAnalysis/ClassicSVfit/interface/MeasuredTauLepton.h"
-#include "TauAnalysis/ClassicSVfit/interface/svFitAuxFunctions.h" // LorentzVector
-#include "TauAnalysis/ClassicSVfit/interface/svFitHistogramAdapter.h"
+#include "../interface/ClassicSVfit.h"
+#include "../interface/MeasuredTauLepton.h"
+#include "../interface/svFitAuxFunctions.h" // LorentzVector
+#include "../interface/svFitHistogramAdapter.h"
 //#include "TauAnalysis/SVfitTF/interface/HadTauTFCrystalBall2.h"
 
 #include "TH1F.h"
