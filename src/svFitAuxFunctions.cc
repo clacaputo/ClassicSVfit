@@ -1,4 +1,4 @@
-#include "TauAnalysis/ClassicSVfit/interface/svFitAuxFunctions.h"
+#include "../interface/svFitAuxFunctions.h"
 
 #include <TMath.h>
 #include <TF1.h>

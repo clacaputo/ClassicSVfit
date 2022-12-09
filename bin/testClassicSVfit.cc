@@ -4,12 +4,12 @@
    \brief Basic example of the use of the standalone version of the "classic" SVfit algorithm
 */
 
-#include "TauAnalysis/ClassicSVfit/interface/ClassicSVfit.h"
-#include "TauAnalysis/ClassicSVfit/interface/MeasuredTauLepton.h"
-#include "TauAnalysis/ClassicSVfit/interface/svFitHistogramAdapter.h"
+#include "../interface/ClassicSVfit.h"
+#include "../interface/MeasuredTauLepton.h"
+#include "../interface/svFitHistogramAdapter.h"
 //#include "TauAnalysis/SVfitTF/interface/HadTauTFCrystalBall2.h"
 
-#include "TauAnalysis/ClassicSVfit/interface/FastMTT.h"
+#include "../interface/FastMTT.h"
 
 #include "TH1F.h"
 

@@ -1,6 +1,6 @@
-#include "TauAnalysis/ClassicSVfit/interface/ClassicSVfitIntegrand.h"
+#include "../interface/ClassicSVfitIntegrand.h"
 
-#include "TauAnalysis/ClassicSVfit/interface/SVfitIntegratorMarkovChain.h"
+#include "../interface/SVfitIntegratorMarkovChain.h"
 
 #include <TMath.h>
 #include <TArrayF.h>

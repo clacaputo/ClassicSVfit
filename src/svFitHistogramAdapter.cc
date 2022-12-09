@@ -1,4 +1,4 @@
-#include "TauAnalysis/ClassicSVfit/interface/svFitHistogramAdapter.h"
+#include "../interface/svFitHistogramAdapter.h"
 
 #include <TMath.h>
 #include <TFile.h>

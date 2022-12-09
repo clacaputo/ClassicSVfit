@@ -1,6 +1,0 @@
-<bin   file="testClassicSVfit.cc" name="testClassicSVfit">
-  <use name="TauAnalysis/ClassicSVfit"/>
-  <use name="TauAnalysis/SVfitTF"/>
-  <use name="root"/>
-  <Flags CPPDEFINES="USE_SVFITTF"/>
-</bin>

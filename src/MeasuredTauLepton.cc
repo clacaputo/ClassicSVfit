@@ -1,5 +1,5 @@
-#include "TauAnalysis/ClassicSVfit/interface/MeasuredTauLepton.h"
-#include "TauAnalysis/ClassicSVfit/interface/svFitAuxFunctions.h"
+#include "../interface/MeasuredTauLepton.h"
+#include "../interface/svFitAuxFunctions.h"
 
 #include <TMath.h>
 

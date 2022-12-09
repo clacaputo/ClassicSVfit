@@ -11,8 +11,8 @@
 #include "TF1.h"
 #include "Math/BasicMinimizer.h"
 
-#include "TauAnalysis/ClassicSVfit/interface/FastMTT.h"
-#include "TauAnalysis/ClassicSVfit/interface/MeasuredTauLepton.h"
+#include "../interface/FastMTT.h"
+#include "../interface/MeasuredTauLepton.h"
 
 ///////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////

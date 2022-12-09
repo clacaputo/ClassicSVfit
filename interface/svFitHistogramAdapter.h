@@ -1,7 +1,7 @@
 #ifndef TauAnalysis_ClassicSVfit_svFitHistogramAdapter_h
 #define TauAnalysis_ClassicSVfit_svFitHistogramAdapter_h
 
-#include "TauAnalysis/ClassicSVfit/interface/MeasuredTauLepton.h"
+#include "./MeasuredTauLepton.h"
 
 #include <Math/Functor.h>
 #include <TH1.h>
