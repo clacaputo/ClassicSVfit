@@ -12,6 +12,7 @@
 
 using namespace classic_svFit;
 
+
 class SVfitProducerCppWorker{
 
 public:
@@ -24,6 +25,12 @@ public:
     void setMeasuredTauLeptons();
 
     const double getSVfit(int verbosity = 0 );
+
+    const double computeSVfit(double cov00, double cov01, double cov10, double cov11,
+                          double METx, double METy, 
+                          double pT1, double eta1, double phi1,
+                          double pT2, double eta2, double phi2
+                          );
 
 private:
     double m_measuredMETx, m_measuredMETy;
