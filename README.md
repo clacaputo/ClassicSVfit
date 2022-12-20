@@ -6,7 +6,7 @@ Latest version of SVfit_standalone algorithm and FastMTT for [bamboo](https://gi
 In order to install the code, execute:
 
 ```
-git clone git@github.com:clacaputo/ClassicSVfit.git ClassicSVfit -b cmake_build
+git clone git@github.com:clacaputo/ClassicSVfit.git ClassicSVfit -b fastMTT_cmake_build
 mkdir build-ClassicSVfit-FastMTT/
 cd build-ClassicSVfit-FastMTT/
 cmake cmake -DCMAKE_INSTALL_PREFIX=$VIRTUAL_ENV ../ClassicSVfit/
