@@ -38,7 +38,7 @@ public:
                               std::string category
                              );
 
-    const double computeFastMTT(double cov00, double cov01, double cov10, double cov11,
+    const LorentzVector computeFastMTT(double cov00, double cov01, double cov10, double cov11,
                               double METx, double METy, 
                               double pT1, double eta1, double phi1, double mass1,
                               double pT2, double eta2, double phi2, double mass2,

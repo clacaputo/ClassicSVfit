@@ -29,6 +29,8 @@ const double SVfitBambooProducer::computeSVfit(double cov00, double cov01, doubl
 
   // Strange but it happens
   if ( decayPair.first == MeasuredTauLepton::kTauToElecDecay && mass1 < 0 ) mass1 = 0.51100e-3;
+  if ( decayPair.first == MeasuredTauLepton::kTauToHadDecay) mass1 = (mass1 > 1.5) ? 1.5 : mass1;
+  if ( decayPair.second== MeasuredTauLepton::kTauToHadDecay) mass2 = (mass2 > 1.5) ? 1.5 : mass2;
 
   measuredTauLeptons.push_back(MeasuredTauLepton(decayPair.first,  pT1, eta1, phi1, mass1)); // tau -> decayType (Pt, eta, phi, mass)
   measuredTauLeptons.push_back(MeasuredTauLepton(decayPair.second, pT2, eta2, phi2, mass2)); // tau -> decayType (Pt, eta, phi, mass)
@@ -52,7 +54,7 @@ const double SVfitBambooProducer::computeSVfit(double cov00, double cov01, doubl
   return mass;
 }
 
-const double SVfitBambooProducer::computeFastMTT(double cov00, double cov01, double cov10, double cov11,
+const LorentzVector SVfitBambooProducer::computeFastMTT(double cov00, double cov01, double cov10, double cov11,
                                                    double METx, double METy, 
                                                    double pT1, double eta1, double phi1, double mass1,
                                                    double pT2, double eta2, double phi2, double mass2,
@@ -72,7 +74,9 @@ const double SVfitBambooProducer::computeFastMTT(double cov00, double cov01, dou
 
   // Strange but it happens
   if ( decayPair.first == MeasuredTauLepton::kTauToElecDecay && mass1 < 0 ) mass1 = 0.51100e-3;
-
+  if ( decayPair.first == MeasuredTauLepton::kTauToHadDecay) mass1 = (mass1 > 1.5) ? 1.5 : mass1;
+  if ( decayPair.second== MeasuredTauLepton::kTauToHadDecay) mass2 = (mass2 > 1.5) ? 1.5 : mass2;
+  
   measuredTauLeptons.push_back(MeasuredTauLepton(decayPair.first,  pT1, eta1, phi1, mass1)); // tau -> decayType (Pt, eta, phi, mass)
   measuredTauLeptons.push_back(MeasuredTauLepton(decayPair.second, pT2, eta2, phi2, mass2)); // tau -> decayType (Pt, eta, phi, mass)
   
@@ -85,5 +89,5 @@ const double SVfitBambooProducer::computeFastMTT(double cov00, double cov01, dou
 
   measuredTauLeptons.clear();
 
-  return ttP4.M();
+  return ttP4;//ttP4.M();
 }
