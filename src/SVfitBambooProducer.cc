@@ -28,7 +28,7 @@ const double SVfitBambooProducer::computeSVfit(double cov00, double cov01, doubl
   auto decayPair       = utils::catToDecayPair[category];
 
   // Strange but it happens
-  if ( decayPair.first == MeasuredTauLepton::kTauToElecDecay && mass1 < 0 ) mass1 = 0.51100e-3;
+  if ( decayPair.first == MeasuredTauLepton::kTauToElecDecay ) mass1 = 0.51100e-3;
   if ( decayPair.first == MeasuredTauLepton::kTauToHadDecay) mass1 = (mass1 > 1.5) ? 1.5 : mass1;
   if ( decayPair.second== MeasuredTauLepton::kTauToHadDecay) mass2 = (mass2 > 1.5) ? 1.5 : mass2;
 
@@ -73,7 +73,7 @@ const LorentzVector SVfitBambooProducer::computeFastMTT(double cov00, double cov
   auto decayPair       = utils::catToDecayPair[category];
 
   // Strange but it happens
-  if ( decayPair.first == MeasuredTauLepton::kTauToElecDecay && mass1 < 0 ) mass1 = 0.51100e-3;
+  if ( decayPair.first == MeasuredTauLepton::kTauToElecDecay ) mass1 = 0.51100e-3;
   if ( decayPair.first == MeasuredTauLepton::kTauToHadDecay) mass1 = (mass1 > 1.5) ? 1.5 : mass1;
   if ( decayPair.second== MeasuredTauLepton::kTauToHadDecay) mass2 = (mass2 > 1.5) ? 1.5 : mass2;
   
